@@ -1,0 +1,39 @@
+ 1
+down vote
+favorite
+
+I have the following function that takes 3 pieces of information (name, age, hometown) for 3 people and saves it in a txt file.
+
+def peopleInfo():
+    txtFile = open("info.txt", "w")
+    i = 0
+    for i in range(0, 3):
+        name = input("Enter name ")
+        age = input("Enter age ")
+        hometown = input("Enter hometown ")
+        txtFile.write(name + "\n" + age + "\n" + hometown + "\n")
+    txtFile.close()
+
+I am now trying to create a function that will read the text file and print a persons name if their hometown is 'Oxford'. So far I have the following just to read the text from the file but im not sure how to skip back a line and print the name if the town is Oxford.
+
+def splitLine():
+    txtFile = open("info.txt", "r")
+    for line in txtFile:
+        line = line.rstrip("\n")
+        print(line)
+
+Thanks for any help!
+python string text
+shareimprove this question
+edited Jul 25 '16 at 5:24
+Hooked
+43.2k25131201
+asked Mar 28 '13 at 14:28
+h1h1
+3702714
+
+    1
+    why are you storing a person's info in separate lines? use , or tab – karthikr Mar 28 '13 at 14:31
+
+add a comment
+
